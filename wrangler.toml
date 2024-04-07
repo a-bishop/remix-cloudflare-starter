@@ -1,13 +1,14 @@
+# https://developers.cloudflare.com/pages/functions/wrangler-configuration
 d1_databases = [
 	{ binding = "DB", database_id = "db-local", database_name = "db-local", preview_database_id = "DB" },
 ]
 
 [env.staging]
 d1_databases = [
-	{ binding = "DB", database_id = "6e9dca69-a817-42e1-8ca5-d5b6c33671d6", database_name = "db-staging" },
+	{ binding = "DB", database_id = "<your staging DB ID here>", database_name = "db-staging" },
 ]
 
 [env.production]
 d1_databases = [
-	{ binding = "DB", database_id = "beea7db2-562f-4535-9d54-0447f603c8ce", database_name = "db-production" },
+	{ binding = "DB", database_id = "<your production DB ID here>", database_name = "db-production" },
 ]

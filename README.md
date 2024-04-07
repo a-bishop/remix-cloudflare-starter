@@ -24,6 +24,10 @@ BASE_URL=https://localhost:8788
 1. Run `npm run db:migrate:local` to apply db migrations
 1. Run `npm start` to spin up the dev server
 1. Visit https://localhost:8788 to see the application running
-1. Run `npm run db:schema:generate` after making modifications to the db schema to generate db migrations from it.
-1. Run `npm run db:studio` in a separate terminal tab to spin up a drizzle studio instance to interact with the local D1 db.
-1. Github integration and automatic deployments are enabled for the `staging` and `main` branches (configurable in `./build.sh`). [More info](https://developers.cloudflare.com/pages/framework-guides/deploy-a-remix-site/) on setting up your Cloudflare account for Github integration.
+1. Run `npm run db:schema:generate` after making modifications to the db schema to generate db migrations from it
+1. Run `npm run db:studio` in a separate terminal tab to spin up a drizzle studio instance to interact with the local D1 db
+
+### Deploying to Cloudflare
+
+1. Create a Clouflare account and follow the [instructions here]((https://developers.cloudflare.com/pages/framework-guides/deploy-a-remix-site/)) for deploying Remix site to Cloudflare Pages with a Github integration. Automatic deployments are enabled by default for the `staging` and `main` branches (configurable in `./build.sh`).
+1. For interacting with your D1 DB in preview and production, you'll need to create D1 instances in your Cloudflare account and bind the DB IDs in `./wrangler.toml` [More info here](https://developers.cloudflare.com/pages/functions/wrangler-configuration).
