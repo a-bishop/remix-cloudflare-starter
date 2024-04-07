@@ -1,7 +1,6 @@
 import os from "node:os";
 
 const userHomeDir = os.homedir();
-console.log(userHomeDir)
 
 /** @type {import('@remix-run/dev').AppConfig} */
 export default {
