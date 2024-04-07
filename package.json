@@ -7,7 +7,7 @@
     "build": "remix build",
     "start": "remix dev --json --manual -c \"wrangler pages dev ./public --local-protocol=https --kv=KV --d1=DB\"",
     "typecheck": "tsc",
-    "cert:regen": "mkcert -cert-file /Users/Home/.wrangler/local-cert/cert.pem -key-file /Users/Home/.wrangler/local-cert/key.pem localhost 127.0.0.1 192.168.1.65",
+    "cert:regen": "mkcert -cert-file ~/.wrangler/local-cert/cert.pem -key-file ~/.wrangler/local-cert/key.pem localhost 127.0.0.1 192.168.1.65",
     "test": "vitest",
     "db:schema:generate": "drizzle-kit generate:sqlite --schema=app/schema.ts --out=migrations",
     "db:migrate:local": "wrangler d1 migrations apply db-local --local",
